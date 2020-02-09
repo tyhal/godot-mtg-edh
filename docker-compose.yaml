@@ -1,0 +1,7 @@
+version: '3'
+services:
+  client:
+    build: ./client-export
+    ports:
+    - "80:80"
+

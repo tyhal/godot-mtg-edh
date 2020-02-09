@@ -15,7 +15,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="mtg-edh-client"
+config/name="mtg-edh-server"
+run/main_scene="res://Board.tscn"
 config/icon="res://icon.png"
 
 [rendering]

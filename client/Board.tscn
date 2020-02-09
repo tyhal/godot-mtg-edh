@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://DrawCard.gd" type="Script" id=1]
+[ext_resource path="res://Board.gd" type="Script" id=2]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Area2D
+
+func _process(delta):
+	if beingDragged:
+		set_position(get_viewport().get_mouse_position())
+
+var beingDragged = false
+
+func _on_Card_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		beingDragged = event.is_pressed()
+			
+"
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 30, 45 )
+
+[node name="Board" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Card" type="Area2D" parent="."]
+script = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card"]
+shape = SubResource( 1 )
+script = ExtResource( 1 )
+[connection signal="input_event" from="Card" to="Card/CollisionShape2D" method="_on_Card_input_event"]
