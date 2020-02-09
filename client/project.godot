@@ -15,9 +15,13 @@ _global_script_class_icons={
 
 [application]
 
-config/name="mtg-edh-server"
-run/main_scene="res://Board.tscn"
+config/name="mtg-edh-client"
+run/main_scene="res://meta/Board.tscn"
 config/icon="res://icon.png"
+
+[physics]
+
+2d/default_gravity_vector=Vector2( 0, 0 )
 
 [rendering]
 
