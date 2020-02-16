@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="Yes" type="RichTextLabel"]
+text = "YES
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
