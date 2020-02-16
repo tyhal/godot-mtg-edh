@@ -1,12 +1,7 @@
 extends Node
 
 var tapped = false
+var position = {x:0, y:0}
 
-remote func _tap():
-	if tapped  == false:
-		tapped = true
-	else:
-		tapped = false
-
-remote func _get_tap_status():
-	return(tapped)
+remote func tap():
+	tapped = !tapped

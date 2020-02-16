@@ -16,7 +16,7 @@ func _ready():
 	print(get_tree().connect("network_peer_disconnected", self, "_client_disconnected"))
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if server.is_listening():
 		server.poll();
 

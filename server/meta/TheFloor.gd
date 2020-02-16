@@ -5,12 +5,13 @@ var center = Vector2(0,0)
 var ingameplayers = 0;
 
 master func create_board(pos, id):
-	print("maka da board")
+	print("Making the board on the server for {}".format(id))
 	var pBoard = board.instance()
 	pBoard.set_position(pos)
 	pBoard.look_at(center)
-	pBoard.id = id
+	pBoard.id = str(id)
 	pBoard.name = str(id)
+	# getting error "Attempt to call funciton 'get_node' in base 'null instance' on a null instance."
 	get_node("Boards").add_child(pBoard)
 	
 master func player_loaded():
@@ -38,9 +39,7 @@ func all_loaded():
 		var pos = center + direction * radius
 		
 		var id = players.get_child(i).get_id()
-		rpc("create_board", pos , id )
-		rpc("create_board_p", pos , id )
+		rpc("create_board", pos , id)
 		rpc_id(id,"set_player_board", id)
-	
 		# Rotate one step
 		angle += angle_step
