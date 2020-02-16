@@ -22,6 +22,7 @@ func _process(delta):
 func _client_connected(id):
 	print('Client ' + str(id) + ' connected to Server')
 	var newClient = load("res://remote_client.tscn").instance()
+	newClient.set_position(Vector2(100,100))
 	newClient.set_name(str(id))     # spawn players with their respective names
 	get_tree().get_root().add_child(newClient)
 

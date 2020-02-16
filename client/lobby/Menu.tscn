@@ -1,15 +1,33 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://lobby/Button.gd" type="Script" id=1]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 4.51617
+margin_right = 4.51611
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Panel" type="Panel" parent="."]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 900.0
+margin_bottom = 400.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" type="Button" parent="Panel"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 700.0
+margin_bottom = 200.0
+text = "Join Game"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="Panel/Button" to="Panel/Button" method="_on_Button_button_down"]

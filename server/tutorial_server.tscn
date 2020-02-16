@@ -34,3 +34,12 @@ func _client_disconnected(id):
 
 [node name="Server" type="Node"]
 script = SubResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 182.0
+margin_top = 107.0
+margin_right = 390.0
+margin_bottom = 329.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
