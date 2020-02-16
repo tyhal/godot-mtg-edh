@@ -1,22 +1,18 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene format=2]
 
-[sub_resource type="GDScript" id=1]
-script/source = "extends Node2D
+[node name="Lobby" type="Control"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-const PORT = 5000
-const ADDR = \"192.168.2.26\"
-
-func join_lobby():
-	var client = WebSocketClient.new();
-	var url = \"ws://\"+ADDR+\":\" + str(PORT) 
-	var error = client.connect_to_url(url, PoolStringArray(), true);
-	get_tree().set_network_peer(client);
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	join_lobby()
-	
-"
-
-[node name="Lobby" type="Node2D"]
-script = SubResource( 1 )
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 57.0
+margin_top = 21.0
+margin_right = 128.0
+margin_bottom = 69.0
+rect_scale = Vector2( 5, 5 )
+text = "You are now in a lobby"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
