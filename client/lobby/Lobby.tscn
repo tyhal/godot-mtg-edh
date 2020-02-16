@@ -1,6 +1,9 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://lobby/Lobby.gd" type="Script" id=2]
 
 [node name="Lobby" type="Control"]
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -8,11 +11,21 @@ __meta__ = {
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 57.0
 margin_top = 21.0
-margin_right = 128.0
-margin_bottom = 69.0
-rect_scale = Vector2( 5, 5 )
+margin_right = 258.0
+margin_bottom = 43.0
 text = "You are now in a lobby"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
 }
+
+[node name="Start" type="Button" parent="."]
+margin_left = 58.684
+margin_top = 64.0362
+margin_right = 278.684
+margin_bottom = 139.036
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="Start" to="." method="_on_Start_button_down"]

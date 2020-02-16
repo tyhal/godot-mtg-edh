@@ -5,7 +5,7 @@ var client = WebSocketClient.new()
 
 func _on_Button_button_down():
 	get_tree().connect("network_peer_connected", self, "_connected")
-	var url = "ws://127.0.0.1:" + str(PORT) 
+	var url = "ws://" + $Address.text + ":" + str(PORT) 
 	var error = client.connect_to_url(url, PoolStringArray(), true);
 	get_tree().set_network_peer(client);
 	print(error)

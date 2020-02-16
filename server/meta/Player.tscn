@@ -1,8 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="Yes" type="RichTextLabel"]
-text = "YES
-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[ext_resource path="res://meta/Player.gd" type="Script" id=1]
+
+[node name="Player" type="Node"]
+script = ExtResource( 1 )
