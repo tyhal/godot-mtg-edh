@@ -2,11 +2,11 @@ extends Node
 
 var tapped = false
 
-remote func _tap():
+remote func tap(id):
 	if tapped  == false:
 		tapped = true
 	else:
 		tapped = false
 
-remote func _get_tap_status():
+remote func get_tap_status():
 	return(tapped)
