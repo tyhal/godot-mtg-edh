@@ -9,6 +9,7 @@ export.cfg
 export_presets.cfg
 
 client-export/exported
+server-export/exported
 
 # Mono-specific ignores
 .mono/

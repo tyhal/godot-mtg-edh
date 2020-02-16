@@ -5,6 +5,7 @@ var card = load("res://obj/Card.tscn")
 var hand = 7
 var held_object = null
 var colorC = Color(randf(),randf(),randf())
+var id = 0
 			
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -31,4 +32,3 @@ func _unhandled_input(event):
 		if held_object and !event.pressed:
 			held_object.drop(Input.get_last_mouse_speed())
 			held_object = null
-
