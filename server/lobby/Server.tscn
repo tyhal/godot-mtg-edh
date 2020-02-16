@@ -4,3 +4,5 @@
 
 [node name="Server" type="Node"]
 script = ExtResource( 1 )
+
+[node name="Cards" type="Node" parent="."]
