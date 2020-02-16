@@ -24,7 +24,9 @@ func _ready():
 	
 		var pBoard = board.instance()
 		pBoard.set_position(pos)
-		pBoard.look_at(Vector2(0,0))
+		pBoard.look_at(center)
+		# print(pBoard.get_node("Camera2D"))
+		# pBoard.get_node("Camera2D").look_at(center)
 		get_node("Boards").add_child(pBoard)
 	
 		# Rotate one step

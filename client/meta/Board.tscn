@@ -18,4 +18,5 @@ script = ExtResource( 2 )
 [node name="Cards" type="Node2D" parent="Matt"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+rotating = true
 current = true
